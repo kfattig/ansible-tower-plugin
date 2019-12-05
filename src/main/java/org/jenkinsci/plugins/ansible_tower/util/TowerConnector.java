@@ -505,7 +505,7 @@ public class TowerConnector implements Serializable {
             The decision point will be wheter or not there is more than one machine or vault credential.
             This is because the old method is not deprecated but it can't handle more than machine/vault credential
          */
-        if(credentials.get("machine").size() > 1 || credentials.get("vault").size() > 1) {
+        if(credentials.get("machine").size() > 0 || credentials.get("vault").size() > 1) {
             // We need to pass as a new field
             JSONArray allCredentials = new JSONArray();
             allCredentials.addAll(credentials.get("machine"));
